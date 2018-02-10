@@ -6,7 +6,7 @@ let admissionSchema=new Schema({
     month: Number,
     year: Number,
     gender: String,
-    enrollment:Number,
+    enrollment:String,
     locality: String,
     aadhar: Boolean,
     remarks: String,

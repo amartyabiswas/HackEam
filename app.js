@@ -1,6 +1,7 @@
 let express = require('express');
 let path = require('path');
 let logger = require('morgan');
+let port=process.env.PORT||5000;
 let cookieParser = require('cookie-parser');
 let bodyParser = require('body-parser');
 
@@ -44,7 +45,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-app.listen(process.env.PORT||5000, function () {
+app.listen(port, function () {
    console.log('Magic happens at port '+ 5000);
 });
 
