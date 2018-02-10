@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>anatine - a free css template</title>
+    <link rel="stylesheet" href="superAdmin.css" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+</head>
+
+<body>
+
+<section id="body" class="width">
+    <aside id="sidebar" class="column-left">
+
+        <header>
+            <h1><strong><a href="#">FXB Suraksha</a></strong></h1>
+            <h2>Welcome to our website!</h2>
+        </header>
+
+        <nav id="mainnav">
+            <ul>
+                <li><a href="/Member">Home</a></li>
+                <li  class="selected-item"><a href="/admissionPage_user">New Admission</a></li>
+                <li><a href="/users/alladmissions">All admissions</a></li>
+                <li><a href="#">Manage Admins</a></li>
+                <li><a href="#">Manage Users</a></li>
+                <li><a href="#">Update Blog</a></li>
+                <li><a href="#">Manage Newsfeeds</a></li>
+            </ul>
+        </nav>
+
+    </aside>
+    <section id="content" class="column-right">
+
+        <article>
+            <h2><strong>The Admission Page</strong></h2>
+            <div class="article-info">Posted on <time datetime="2013-05-14">14 May</time> by <a href="#" rel="author">Joe Bloggs</a></div>
+            <a href="#" class="button">Profile</a>&nbsp;<a href="/logout" class="button button-reversed">Logout</a>
+        </article>
+
+        <article class="expanded">
+            <p>Purchasing a template license for 8.00 GBP (at time of writing around 12 USD) gives you the right to remove any branding including links, logos and source tags relating to ZyPOP. As well as waiving the attribution requirement, your payment will also help us provide continued support for users as well as creating new web templates. Find out more about how to buy at the licensing page on our website which can be accessed at <a href="http://zypopwebtemplates.com/licensing" title="template license">http://zypopwebtemplates.com/licensing</a></p>
+            <div class="row">
+                <h1 style="text-align: center">Get New Admission</h1>
+                <div style="width: 70%; margin: 25px auto;">
+                    <form action="/users/form" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input class="form-control" type="text" name="name" placeholder="Yosemite">
+                        </div>
+                        <div class="form-group">
+                            <label for="name" style="display: block">Age and Gender</label>
+                            <input class="form-control" type="text" name="age" placeholder="5-16" style="width: 50%; display: inline; margin-right: 40px">
+                            <input type="radio" name="gender" value="male" checked> Male
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="radio" name="gender" value="female"> Female
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Enrollment Status</label>
+                            <input class="form-control" type="text" name="enrollment" placeholder="Out of the 4 predetermined sections">
+                        </div>
+                        <div class="form-group">
+                            <label for="name" style="display: block">Parent's Name</label>
+                            <input class="form-control" type="text" name="father" placeholder="Father's Name" style="width: 50%; display: inline">
+                            <input class="form-control" type="text" name="mother" placeholder="Mother's Name" style="width: 49%; display: inline">
+                        </div>
+                        <div class="form-group">
+                            <label for="name" style="display: block">Contact Number</label>
+                            <input class="form-control" type="text" name="mobile" placeholder="Mobile Number" style="width: 50%; display: inline">
+                            <input class="form-control" type="text" name="phone" placeholder="Tele-phone Number" style="width: 49%; display: inline">
+                        </div>
+                        <div class="form-group">
+                            <label for="name" style="display: block">Family Occupation</label>
+                            <input class="form-control" type="text" name="father's" placeholder="Father's Occupation" style="width: 50%; display: inline">
+                            <input class="form-control" type="text" name="mother's" placeholder="Mother's Occupation" style="width: 49%; display: inline">
+                        </div>
+                        <div class="form-group">
+                            <label for="location">Location</label>
+                            <input class="form-control" type="text" name="location" id="location" placeholder="Yosemite National Park, CA">
+                        </div>
+                        <div class="form-group">
+                            <label for="location">Native State/ Village</label>
+                            <input class="form-control" type="text" name="location" id="native" placeholder="West-Bengal">
+                        </div>
+                        <div class="form-group">
+                            <label for="name" style="display: block">Family Background and Siblings</label>
+                            <input class="form-control" type="text" name="background" placeholder="Family History" style="width: 70%; display: inline">
+                            <input class="form-control" type="text" name="siblings" placeholder="Count of Siblings" style="width: 29%; display: inline">
+                        </div>
+                        <div class="form-group">
+                            <label for="location">Status of Immunization</label>
+                            <input class="form-control" type="text" name="health" placeholder="DPT Booster, Polio, and Tetanus vaccinated..">
+                        </div>
+                        <div class="form-group">
+                            <label for="name" style="display: block">Have Aadhar Card?</label>
+                            <input type="radio" name="aadhar" value="yes" checked> Yes
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="radio" name="aadhar" value="no"> No
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Description/ Remarks</label>
+                            <input class="form-control" type="text" name="remarks" id="description" placeholder="Amazing Boy, who has studied till class 5th">
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-lg btn-primary btn-block">Submit!</button>
+                        </div>
+                    </form>
+                    <a href="/campgrounds">Go Back</a>
+                </div>
+            </div>
+        </article>
+
+    </section>
+
+    <div class="clear"></div>
+
+</section>
+
+
+<script
+        src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</body>
+</html>
