@@ -3,10 +3,30 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
     <title>anatine - a free css template</title>
-    <link rel="stylesheet" href="/superAdmin.css" type="text/css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 
+    <link rel="stylesheet" href="/superAdmin.css" type="text/css" />
+    <link rel="stylesheet" href="/alladmission.css" type="text/css" />
+    <style>
+        input[type=text] {
+            width: 130px;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            background-color: white;
+            background-image: url('searchicon.png');
+            background-position: 10px 10px;
+            background-repeat: no-repeat;
+            padding: 12px 20px 12px 40px;
+            -webkit-transition: width 0.4s ease-in-out;
+            transition: width 0.4s ease-in-out;
+        }
+
+        input[type=text]:focus {
+            width: 100%;
+        }
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
 </head>
 
@@ -25,10 +45,7 @@
                 <li><a href="/Member">Home</a></li>
                 <li><a href="/admissionPage_user">New Admission</a></li>
                 <li class="selected-item"><a href="/users/alladmissions">All admissions</a></li>
-                <li><a href="#">Manage Admins</a></li>
-                <li><a href="#">Manage Users</a></li>
                 <li><a href="#">Update Blog</a></li>
-                <li><a href="#">Manage Newsfeeds</a></li>
             </ul>
         </nav>
 
@@ -42,88 +59,66 @@
         </article>
 
         <article class="expanded">
-            <p>Purchasing a template license for 8.00 GBP (at time of writing around 12 USD) gives you the right to remove any branding including links, logos and source tags relating to ZyPOP. As well as waiving the attribution requirement, your payment will also help us provide continued support for users as well as creating new web templates. Find out more about how to buy at the licensing page on our website which can be accessed at <a href="http://zypopwebtemplates.com/licensing" title="template license">http://zypopwebtemplates.com/licensing</a></p>
-            <div class="row">
-                <h1 style="text-align: center">Get New Admission</h1>
-                <div style="width: 70%; margin: 25px auto;">
-                    <form action="/users/form" method="POST">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input class="form-control" type="text" name="name" placeholder="Yosemite">
-                        </div>
-                        <div class="form-group">
-                            <label for="name" style="display: block">Age and Gender</label>
-                            <input class="form-control" type="text" name="age" placeholder="5-16" style="width: 50%; display: inline; margin-right: 40px">
-                            <input type="radio" name="gender" value="male" checked> Male
-                            &nbsp;&nbsp;&nbsp;&nbsp;
-                            <input type="radio" name="gender" value="female"> Female
-                        </div>
-                        <div class="form-group">
-                            <label for="name">Enrollment Status</label>
-                            <input class="form-control" type="text" name="enrollment" placeholder="Out of the 4 predetermined sections">
-                        </div>
-                        <div class="form-group">
-                            <label for="name" style="display: block">Parent's Name</label>
-                            <input class="form-control" type="text" name="father" placeholder="Father's Name" style="width: 50%; display: inline">
-                            <input class="form-control" type="text" name="mother" placeholder="Mother's Name" style="width: 49%; display: inline">
-                        </div>
-                        <div class="form-group">
-                            <label for="name" style="display: block">Contact Number</label>
-                            <input class="form-control" type="text" name="mobile" placeholder="Mobile Number" style="width: 50%; display: inline">
-                            <input class="form-control" type="text" name="phone" placeholder="Tele-phone Number" style="width: 49%; display: inline">
-                        </div>
-                        <div class="form-group">
-                            <label for="name" style="display: block">Family Occupation</label>
-                            <input class="form-control" type="text" name="father's" placeholder="Father's Occupation" style="width: 50%; display: inline">
-                            <input class="form-control" type="text" name="mother's" placeholder="Mother's Occupation" style="width: 49%; display: inline">
-                        </div>
-                        <div class="form-group">
-                            <label for="location">Location</label>
-                            <input class="form-control" type="text" name="location" id="location" placeholder="Yosemite National Park, CA">
-                        </div>
-                        <div class="form-group">
-                            <label for="location">Native State/ Village</label>
-                            <input class="form-control" type="text" name="location" id="native" placeholder="West-Bengal">
-                        </div>
-                        <div class="form-group">
-                            <label for="name" style="display: block">Family Background and Siblings</label>
-                            <input class="form-control" type="text" name="background" placeholder="Family History" style="width: 70%; display: inline">
-                            <input class="form-control" type="text" name="siblings" placeholder="Count of Siblings" style="width: 29%; display: inline">
-                        </div>
-                        <div class="form-group">
-                            <label for="location">Status of Immunization</label>
-                            <input class="form-control" type="text" name="health" placeholder="DPT Booster, Polio, and Tetanus vaccinated..">
-                        </div>
-                        <div class="form-group">
-                            <label for="name" style="display: block">Have Aadhar Card?</label>
-                            <input type="radio" name="aadhar" value="yes" checked> Yes
-                            &nbsp;&nbsp;&nbsp;&nbsp;
-                            <input type="radio" name="aadhar" value="no"> No
-                        </div>
-                        <div class="form-group">
-                            <label for="description">Description/ Remarks</label>
-                            <input class="form-control" type="text" name="remarks" id="description" placeholder="Amazing Boy, who has studied till class 5th">
-                        </div>
-                        <div class="form-group">
-                            <button class="btn btn-lg btn-primary btn-block">Submit!</button>
-                        </div>
-                    </form>
-                    <a href="/campgrounds">Go Back</a>
+            <form action="/users/search" method="POST">
+                <input type="text" name="search" placeholder="Search..">
+            </form>
+            <br>
+            <!--Filters-->
+            <label for="location">Apply Filters</label><br><br>
+            <form method="post" action="/users/filter">
+                Age: <input type="number" name="from" placeholder="From" style="width: 10%">
+                <input type="number" name="to" placeholder="To" style="width: 10%">
+                &nbsp;&nbsp;&nbsp;
+                Gender: <select type="number" name="gender" style="width: 10%">
+                    <option>male</option>
+                    <option>female</option>
+                </select>&nbsp;&nbsp;&nbsp;
+                Enrollment:<select type="text" name="enrollment" style="width: 10%">
+                    <option value="">None</option>
+                    <option value="Going to school">Going to school</option>
+                    <option value="Dropouts">Dropouts</option>
+                    <option value="Not going to school">Not going to school</option>
+                </select>&nbsp;&nbsp;&nbsp;
+                Aadhar:<select type="text" name="aadhar" style="width: 10%">
+                    <option value="">None</option>
+                    <option value="true">true</option>
+                    <option value="false">false</option>
+                </select>
+                <input type="submit" class="btn btn-danger" value="Apply">
+            </form>
+
+            <%data.forEach(function (value) {%>
+            <div id="container">
+                <div class="product-details">
+                    <h1><%=value.name%></h1>
+                    <br><br>
+                    <p class="information">" Especially good for container gardening, the Angelonia will keep blooming all summer even if old flowers are removed. Once tall enough to cut, bring them inside and you'll notice a light scent that some say is reminiscent of apples. "</p>
+                    <div class="control">
+                        <button class="btn btn-primary"><a href="/moreInfo/<%=value._id%>" style="color: white">More Info</a></button>
+                    </div>
+                </div>
+                <div class="product-image">
+                    <img src="../<%= value.profile %>" alt="Omar Dsoky">
+                    <div class="info">
+                        <h2>The Description</h2>
+                        <ul>
+                            <li><strong>Sun Needs: </strong>Full Sun</li>
+                            <li><strong>Soil Needs: </strong>Damp</li>
+                            <li><strong>Zones: </strong>9 - 11</li>
+                            <li><strong>Height: </strong>2 - 3 feet</li>
+                            <li><strong>Blooms in: </strong>Mid?Summer - Mid?Fall</li>
+                            <li><strong>Features: </strong>Tolerates heat</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+            <%});%>
         </article>
-
     </section>
-
     <div class="clear"></div>
-
 </section>
 
-
-<script
-        src="https://code.jquery.com/jquery-3.1.1.min.js"
-        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-        crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 </body>

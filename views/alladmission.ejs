@@ -64,6 +64,30 @@
             <form action="/superadmin/search" method="POST">
                 <input type="text" name="search" placeholder="Search..">
             </form>
+            <br>
+            <!--Filters-->
+            <label for="location">Apply Filters</label><br><br>
+            <form method="post" action="/filter">
+                Age: <input type="number" name="from" placeholder="From" style="width: 10%">
+                <input type="number" name="to" placeholder="To" style="width: 10%">
+                &nbsp;&nbsp;&nbsp;
+                Gender: <select type="number" name="gender" style="width: 10%">
+                            <option>male</option>
+                            <option>female</option>
+                        </select>&nbsp;&nbsp;&nbsp;
+                Enrollment:<select type="text" name="enrollment" style="width: 10%">
+                            <option value="">None</option>
+                            <option value="Going to school">Going to school</option>
+                            <option value="Dropouts">Dropouts</option>
+                            <option value="Not going to school">Not going to school</option>
+                        </select>&nbsp;&nbsp;&nbsp;
+                Aadhar:<select type="text" name="aadhar" style="width: 10%">
+                            <option value="">None</option>
+                            <option value="true">true</option>
+                            <option value="false">false</option>
+                        </select>
+                <input type="submit" class="btn btn-danger" value="Apply">
+            </form>
 
              <%data.forEach(function (value) {%>
                 <div id="container">

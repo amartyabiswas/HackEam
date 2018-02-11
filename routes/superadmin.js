@@ -25,7 +25,6 @@ router.get('/alladmissions', function(req, res){
     });
 });
 
-
 router.post('/search',function(req,res){
     console.log('reached');
     let search = req.body.search;

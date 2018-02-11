@@ -160,6 +160,104 @@
 							$menu._hide();
 
 				});
+				var $stat = $('#stat');
+
+				$stat._locked = false;
+	
+				$stat._lock = function() {
+	
+					if ($stat._locked)
+						return false;
+	
+					$stat._locked = true;
+	
+					window.setTimeout(function() {
+						$stat._locked = false;
+					}, 350);
+	
+					return true;
+	
+				};
+	
+				$stat._show = function() {
+	
+					if ($stat._lock())
+						$body.addClass('is-stat-visible');
+	
+				};
+	
+				$stat._hide = function() {
+	
+					if ($stat._lock())
+						$body.removeClass('is-stat-visible');
+	
+				};
+	
+				$stat._toggle = function() {
+	
+					if ($stat._lock())
+						$body.toggleClass('is-stat-visible');
+	
+				};
+	
+				$stat
+					.appendTo($body)
+					.on('click', function(event) {
+	
+						event.stopPropagation();
+	
+						// Hide.
+							$stat._hide();
+	
+					})
+					.find('.inner')
+						.on('click', '.close', function(event) {
+	
+							event.preventDefault();
+							event.stopPropagation();
+							event.stopImmediatePropagation();
+	
+							// Hide.
+								$stat._hide();
+	
+						})
+						.on('click', function(event) {
+							event.stopPropagation();
+						})
+						.on('click', 'a', function(event) {
+	
+							var href = $(this).attr('href');
+	
+							event.preventDefault();
+							event.stopPropagation();
+	
+							// Hide.
+								$stat._hide();
+	
+							// Redirect.
+								window.setTimeout(function() {
+									window.location.href = href;
+								}, 350);
+	
+						});
+	
+				$body
+					.on('click', 'a[href="#stat"]', function(event) {
+	
+						event.stopPropagation();
+						event.preventDefault();
+	
+						// Toggle.
+							$stat._toggle();
+	
+					})
+					.on('keydown', function(event) {
+	
+						// Hide on escape.
+							if (event.keyCode == 27)
+								$stat._hide();
+	
+					});
 
 	});
 

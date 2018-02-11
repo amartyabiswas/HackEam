@@ -4,8 +4,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
     <title>anatine - a free css template</title>
     <link rel="stylesheet" href="superAdmin.css" type="text/css" />
-
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <link rel="stylesheet" href="assets/css/counter.css" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <link href="jquery.incremental-counter.css" rel="stylesheet" type="text/css">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
 </head>
 
@@ -23,11 +25,9 @@
             <ul>
                 <li class="selected-item"><a href="/Admin">Home</a></li>
                 <li><a href="/admissionPage_admin">New Admission</a></li>
-                <li><a href="/admin/alladmissions">All admissions</a></li>
-                <li><a href="#">Manage Admins</a></li>
-                <li><a href="#">Manage Users</a></li>
+                <li><a href="/admin/alladmissions_admin">All admissions</a></li>
+                <li><a href="/manageMember_su">Manage Users</a></li>
                 <li><a href="#">Update Blog</a></li>
-                <li><a href="#">Manage Newsfeeds</a></li>
             </ul>
         </nav>
 
@@ -36,26 +36,75 @@
 
         <article>
             <h2>Admin Page</h2>
-            <div class="article-info">Posted on <time datetime="2013-05-14">14 May</time> by <a href="#" rel="author">Joe Bloggs</a></div>
             <a href="#" class="button">Profile</a>&nbsp;<a href="/MemberSignup" class="button button-reversed">Create Members</a>&nbsp;<a href="/logout" class="button">Logout</a>
         </article>
 
         <article class="expanded">
-            <p>Purchasing a template license for 8.00 GBP (at time of writing around 12 USD) gives you the right to remove any branding including links, logos and source tags relating to ZyPOP. As well as waiving the attribution requirement, your payment will also help us provide continued support for users as well as creating new web templates. Find out more about how to buy at the licensing page on our website which can be accessed at <a href="http://zypopwebtemplates.com/licensing" title="template license">http://zypopwebtemplates.com/licensing</a></p>
-            <h3>Lorem lipsum</h3>
-            <p>Morbi fermentum condimentum felis, commodo vestibulum sem mattis sed. Aliquam magna ante, mollis vitae tincidunt in, malesuada vitae turpis. Sed aliquam libero ut velit bibendum consectetur. Quisque sagittis, est in laoreet semper, enim dui consequat felis, faucibus ornare urna velit nec leo. Maecenas condimentum velit vitae est lobortis fermentum. In tristique sem vitae metus ornare luctus tempus nisl volutpat. Integer et est id nisi tempus pharetra sagittis et libero.</p>
+            <p>Manage your members and admins here.<br /></p>
+            <h3>Stats Till Now</h3>
+            <p> </p>
+            <div class="counter">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                            <div class="employees">
+                                <p class="counter-count">879</p>
+                                <p class="employee-p">Total Admissions</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                            <div class="customer">
+                                <p class="counter-count">954</p>
+                                <p class="customer-p">Total Admins</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                            <div class="design">
+                                <p class="counter-count">1050</p>
+                                <p class="design-p">Total Members</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                            <div class="order">
+                                <p class="counter-count">652</p>
+                                <p class="order-p">Having Enrollment</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                            <div class="order">
+                                <p class="counter-count">652</p>
+                                <p class="order-p">Not Having Enrollment</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                            <div class="order">
+                                <p class="counter-count">652</p>
+                                <p class="order-p">Dropouts</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </article>
 
         <footer class="clear">
-            <p>&copy; 2015 sitename. <a href="http://zypopwebtemplates.com/">Free CSS Templates</a> by ZyPOP</p>
+            <p>&copy; 2018 by Tech Titans</p>
         </footer>
 
     </section>
     <div class="clear"></div>
 </section>
 
-
-
-
 </body>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="assets/js/counter.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
 </html>

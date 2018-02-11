@@ -11,7 +11,6 @@
 </head>
 
 <body>
-
 <section id="body" class="width">
     <aside id="sidebar" class="column-left">
 
@@ -58,7 +57,7 @@
                             <input class="form-control" type="text" name="name" placeholder="Yosemite">
                         </div>
                         <div class="form-group">
-                            <label for="name" style="display: block">DOB and Gender</label>
+                            <label for="name" style="display: block">Month, Year and Gender</label>
                             <select class="form-control" type="text" name="month" placeholder="Enter Month" style="width: 25%; display: inline">
                                 <option>1</option>
                                 <option>2</option>
@@ -73,8 +72,7 @@
                                 <option>11</option>
                                 <option>12</option>
                             </select>
-                            <input class="form-control" type="text" name="year" placeholder="Enter Year" style="width: 24%; display: inline; margin-right: 40px">
-                            <input class="form-control" type="number" name="cost" id="cost" value="<%= campground.cost %>" step="1" min="1990" style="width: 24%; display: inline; margin-right: 40px" required>
+                            <input class="form-control" type="text" name="year" placeholder="Enter Year" style="width: 25%; display: inline; margin-right: 80px">
                             <input type="radio" name="gender" value="male" checked> Male
                             &nbsp;&nbsp;&nbsp;&nbsp;
                             <input type="radio" name="gender" value="female"> Female
@@ -83,9 +81,9 @@
                             <label for="name">Enrollment Status</label>
                             <!--<input class="form-control" type="text" name="enrollment" placeholder="Out of the 4 predetermined sections">-->
                             <select class="form-control" type="text" name="enrollment" placeholder="Out of the 4 predetermined sections">
-                                <option>Going to school</option>
-                                <option>Dropouts</option>
-                                <option>Not going to school</option>
+                                <option value="Going to school">Going to school</option>
+                                <option value="Dropouts">Dropouts</option>
+                                <option value="Not going to school">Not going to school</option>
                             </select>
                         </div>
                         <div class="form-group">

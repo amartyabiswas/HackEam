@@ -396,12 +396,10 @@
                             <input class="form-control" type="text" name="name" value="<%= data.name %>" disabled>
                         </div>
                         <div class="form-group">
-                            <label for="name" style="display: block">Age and Gender</label>
+                            <label for="name" style="display: block">Date, Month and Gender</label>
                             <input class="form-control" type="text" name="month" style="width: 25%; display: inline" value="<%= data.month %>" disabled>
                             <input class="form-control" type="text" name="year" style="width: 24%; display: inline; margin-right: 40px" value="<%= data.year %>" disabled>
-                            <input type="radio" name="gender" value="male" checked disabled> Male
-                            &nbsp;&nbsp;&nbsp;&nbsp;
-                            <input type="radio" name="gender" value="female" disabled> Female
+                            <strong>Gender: </strong><%=data.gender%>
                         </div>
                         <div class="form-group">
                             <label for="name">Enrollment Status</label>
@@ -413,9 +411,7 @@
                         </div>
                         <div class="form-group">
                             <label for="name" style="display: block">Have Aadhar Card?</label>
-                            <input type="radio" name="aadhar" value="yes" checked disabled> Yes
-                            &nbsp;&nbsp;&nbsp;&nbsp;
-                            <input type="radio" name="aadhar" value="no" disabled> No
+                            <%=data.aadhar%>
                         </div>
                         <div class="form-group">
                             <label for="description">Description/ Remarks</label>

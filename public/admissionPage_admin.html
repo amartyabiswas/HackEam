@@ -3,15 +3,14 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
     <title>anatine - a free css template</title>
+
     <link rel="stylesheet" href="superAdmin.css" type="text/css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
 </head>
 
 <body>
-
 <section id="body" class="width">
     <aside id="sidebar" class="column-left">
 
@@ -25,13 +24,10 @@
                 <li><a href="/Admin">Home</a></li>
                 <li class="selected-item"><a href="/admissionPage_admin">New Admission</a></li>
                 <li><a href="/admin/alladmissions">All admissions</a></li>
-                <li><a href="#">Manage Admins</a></li>
-                <li><a href="#">Manage Users</a></li>
+                <li><a href="/manageMember_su">Manage Users</a></li>
                 <li><a href="#">Update Blog</a></li>
-                <li><a href="#">Manage Newsfeeds</a></li>
             </ul>
         </nav>
-
     </aside>
     <section id="content" class="column-right">
 
@@ -46,59 +42,58 @@
             <div class="row">
                 <h1 style="text-align: center">Get New Admission</h1>
                 <div style="width: 70%; margin: 25px auto;">
+                    <form action="/upload_admin" method="POST" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="name">Upload Profile Page</label><br>
+                            <input name="myImage" class="btn btn-primary" type="file" style=" display: inline">
+                            <button type="submit" class="btn btn-primary">Upload Profile Pic</button>
+                        </div>
+                    </form>
+
                     <form action="/admin/form" method="POST">
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input class="form-control" type="text" name="name" placeholder="Yosemite">
                         </div>
                         <div class="form-group">
-                            <label for="name" style="display: block">Age and Gender</label>
-                            <input class="form-control" type="text" name="age" placeholder="5-16" style="width: 50%; display: inline; margin-right: 40px">
+                            <label for="name" style="display: block">Month, Year and Gender</label>
+                            <select class="form-control" type="text" name="month" placeholder="Enter Month" style="width: 25%; display: inline">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                                <option>11</option>
+                                <option>12</option>
+                            </select>
+                            <input class="form-control" type="text" name="year" placeholder="Enter Year" style="width: 25%; display: inline; margin-right: 80px">
                             <input type="radio" name="gender" value="male" checked> Male
                             &nbsp;&nbsp;&nbsp;&nbsp;
                             <input type="radio" name="gender" value="female"> Female
                         </div>
                         <div class="form-group">
                             <label for="name">Enrollment Status</label>
-                            <input class="form-control" type="text" name="enrollment" placeholder="Out of the 4 predetermined sections">
-                        </div>
-                        <div class="form-group">
-                            <label for="name" style="display: block">Parent's Name</label>
-                            <input class="form-control" type="text" name="father" placeholder="Father's Name" style="width: 50%; display: inline">
-                            <input class="form-control" type="text" name="mother" placeholder="Mother's Name" style="width: 49%; display: inline">
-                        </div>
-                        <div class="form-group">
-                            <label for="name" style="display: block">Contact Number</label>
-                            <input class="form-control" type="text" name="mobile" placeholder="Mobile Number" style="width: 50%; display: inline">
-                            <input class="form-control" type="text" name="phone" placeholder="Tele-phone Number" style="width: 49%; display: inline">
-                        </div>
-                        <div class="form-group">
-                            <label for="name" style="display: block">Family Occupation</label>
-                            <input class="form-control" type="text" name="father's" placeholder="Father's Occupation" style="width: 50%; display: inline">
-                            <input class="form-control" type="text" name="mother's" placeholder="Mother's Occupation" style="width: 49%; display: inline">
-                        </div>
-                        <div class="form-group">
-                            <label for="location">Location</label>
-                            <input class="form-control" type="text" name="location" id="location" placeholder="Yosemite National Park, CA">
+                            <!--<input class="form-control" type="text" name="enrollment" placeholder="Out of the 4 predetermined sections">-->
+                            <select class="form-control" type="text" name="enrollment" placeholder="Out of the 4 predetermined sections">
+                                <option value="Going to school">Going to school</option>
+                                <option value="Dropouts">Dropouts</option>
+                                <option value="Not going to school">Not going to school</option>
+                            </select>
                         </div>
                         <div class="form-group">
                             <label for="location">Native State/ Village</label>
-                            <input class="form-control" type="text" name="location" id="native" placeholder="West-Bengal">
-                        </div>
-                        <div class="form-group">
-                            <label for="name" style="display: block">Family Background and Siblings</label>
-                            <input class="form-control" type="text" name="background" placeholder="Family History" style="width: 70%; display: inline">
-                            <input class="form-control" type="text" name="siblings" placeholder="Count of Siblings" style="width: 29%; display: inline">
-                        </div>
-                        <div class="form-group">
-                            <label for="location">Status of Immunization</label>
-                            <input class="form-control" type="text" name="health" placeholder="DPT Booster, Polio, and Tetanus vaccinated..">
+                            <input class="form-control" type="text" name="locality" id="native" placeholder="West-Bengal">
                         </div>
                         <div class="form-group">
                             <label for="name" style="display: block">Have Aadhar Card?</label>
-                            <input type="radio" name="aadhar" value="yes" checked> Yes
+                            <input type="radio" name="aadhar" value="yes" checked> True
                             &nbsp;&nbsp;&nbsp;&nbsp;
-                            <input type="radio" name="aadhar" value="no"> No
+                            <input type="radio" name="aadhar" value="no"> False
                         </div>
                         <div class="form-group">
                             <label for="description">Description/ Remarks</label>
@@ -108,7 +103,7 @@
                             <button class="btn btn-lg btn-primary btn-block">Submit!</button>
                         </div>
                     </form>
-                    <a href="/campgrounds">Go Back</a>
+                    <a href="/">Go Back</a>
                 </div>
             </div>
         </article>
@@ -118,8 +113,6 @@
     <div class="clear"></div>
 
 </section>
-
-
 <script
         src="https://code.jquery.com/jquery-3.1.1.min.js"
         integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
